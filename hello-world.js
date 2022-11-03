@@ -28,6 +28,6 @@ const runWasmAdd = async () => {
   const wasmModule = await wasmBrowserInstantiate("./hello-world.wasm");
   const addResult = wasmModule.instance.exports.add(24, 24);
 
-  document.body.textContent = `addResult: ${addResult}`;
+  document.querySelector("p").innerHTML = "result " + addResult;
 };
 runWasmAdd();

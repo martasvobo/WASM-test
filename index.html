@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>WASM TEST</title>
-        <script type="module" src="./hello-world.js"></script>
-        <script type="module" src="./exports.js"></script>
-        <script type="module" src="./index.js"></script>
-    </head>
-    <body></body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WASM TEST</title>
+    <script type="module" src="./hello-world.js"></script>
+    <script type="module" src="./exports.js"></script>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <p></p>
+    <canvas
+      width="20"
+      height="20"
+      style="
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        width: 100%;
+      "
+    >
+    </canvas>
+  </body>
 </html>
