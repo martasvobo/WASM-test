@@ -8,3 +8,7 @@ export function readWasmMemoryAndReturnIndexOne(): i32 {
     let valueAtIndexOne = load<u8>(1);
     return valueAtIndexOne;
 }
+
+declare function consoleLog(arg0: i32): void;
+
+consoleLog(4206969)

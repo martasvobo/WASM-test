@@ -21,13 +21,13 @@ export const wasmBrowserInstantiate = async (wasmModuleUrl, importObject) => {
       return WebAssembly.instantiate(wasmArrayBuffer, importObject);
     };
   }
-  return response
+  return response;
 };
 
 const runWasmAdd = async () => {
-    const wasmModule = await wasmBrowserInstantiate("./hello-world.wasm");
-    const addResult = wasmModule.instance.exports.add(24, 24);
+  const wasmModule = await wasmBrowserInstantiate("./hello-world.wasm");
+  const addResult = wasmModule.instance.exports.add(24, 24);
 
-    document.body.textContent = `addResult: ${addResult}`;
-}
+  document.body.textContent = `addResult: ${addResult}`;
+};
 runWasmAdd();
