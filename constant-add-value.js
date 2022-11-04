@@ -1,7 +1,7 @@
-import { wasmBrowserInstantiate } from "./hello-world.js";
+import { wasmBrowserInstantiate } from "./instance.js";
 
 const runWasm = async () => {
-  const wasmModule = await wasmBrowserInstantiate("./exports.wasm");
+  const wasmModule = await wasmBrowserInstantiate("./constant-add-value.wasm");
 
   const exports = wasmModule.instance.exports;
 

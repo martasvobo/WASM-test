@@ -25,7 +25,7 @@ export const wasmBrowserInstantiate = async (wasmModuleUrl, importObject) => {
 };
 
 const runWasmAdd = async () => {
-  const wasmModule = await wasmBrowserInstantiate("./hello-world.wasm");
+  const wasmModule = await wasmBrowserInstantiate("./addition-function.wasm");
   const addResult = wasmModule.instance.exports.add(24, 24);
 
   document.querySelector("p").innerHTML = "result " + addResult;
